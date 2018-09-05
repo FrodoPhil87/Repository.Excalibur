@@ -1,0 +1,3 @@
+version 1.0.3 - remove big brother channel
+
+version 1.0.0

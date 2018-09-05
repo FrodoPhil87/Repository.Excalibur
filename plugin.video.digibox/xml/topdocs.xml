@@ -1,0 +1,158 @@
+<dir>
+	<title>Tmdb Documentaries</title>
+	<tmdb>genre/movies/99</tmdb>
+	<thumbnail>special://home/addons/plugin.video.digibox/resources/media/Docs_new.png</thumbnail>
+</dir>
+
+
+
+<dir>
+	<title>9-11</title>
+	<topdocs>tdcategory/911</topdocs>
+	<thumbnail>special://home/addons/plugin.video.digibox/resources/media/Docs_new.png</thumbnail>
+</dir>
+
+
+<dir>
+	<title>Art and Artists</title>
+	<topdocs>tdcategory/art-artists</topdocs>
+	<thumbnail>special://home/addons/plugin.video.digibox/resources/media/Docs_new.png</thumbnail>
+</dir>
+
+<dir>
+	<title>Biography</title>
+	<topdocs>tdcategory/biography</topdocs>
+	<thumbnail>special://home/addons/plugin.video.digibox/resources/media/Docs_new.png</thumbnail>
+</dir>
+
+<dir>
+	<title>Comedy</title>
+	<topdocs>tdcategory/comedy</topdocs>
+	<thumbnail>special://home/addons/plugin.video.digibox/resources/media/Docs_new.png</thumbnail>
+</dir>
+
+<dir>
+	<title>Conspiracy</title>
+	<topdocs>tdcategory/crime-conspiracy</topdocs>
+	<thumbnail>special://home/addons/plugin.video.digibox/resources/media/Docs_new.png</thumbnail>
+</dir>
+
+<dir>
+	<title>Crime</title>
+	<topdocs>tdcategory/crime</topdocs>
+	<thumbnail>special://home/addons/plugin.video.digibox/resources/media/Docs_new.png</thumbnail>
+</dir>
+
+<dir>
+	<title>Drugs</title>
+	<topdocs>tdcategory/drugs</topdocs>
+	<thumbnail>special://home/addons/plugin.video.digibox/resources/media/Docs_new.png</thumbnail>
+</dir>
+
+<dir>
+	<title>Economics</title>
+	<topdocs>tdcategory/economics</topdocs>
+	<thumbnail>special://home/addons/plugin.video.digibox/resources/media/Docs_new.png</thumbnail>
+</dir>
+
+<dir>
+	<title>Environment</title>
+	<topdocs>tdcategory/environment</topdocs>
+	<thumbnail>special://home/addons/plugin.video.digibox/resources/media/Docs_new.png</thumbnail>
+</dir>
+
+<dir>
+	<title>Health</title>
+	<topdocs>tdcategory/health</topdocs>
+	<thumbnail>special://home/addons/plugin.video.digibox/resources/media/Docs_new.png</thumbnail>
+</dir>
+
+<dir>
+	<title>History</title>
+	<topdocs>tdcategory/history</topdocs>
+	<thumbnail>special://home/addons/plugin.video.digibox/resources/media/Docs_new.png</thumbnail>
+</dir>
+
+<dir>
+	<title>Media</title>
+	<topdocs>tdcategory/media</topdocs>
+	<thumbnail>special://home/addons/plugin.video.digibox/resources/media/Docs_new.png</thumbnail>
+</dir>
+
+<dir>
+	<title>Military and War</title>
+	<topdocs>tdcategory/military-war</topdocs>
+	<thumbnail>special://home/addons/plugin.video.digibox/resources/media/Docs_new.png</thumbnail>
+</dir>
+
+<dir>
+	<title>Mystery</title>
+	<topdocs>tdcategory/mystery</topdocs>
+	<thumbnail>special://home/addons/plugin.video.digibox/resources/media/Docs_new.png</thumbnail>
+</dir>
+
+<dir>
+	<title>Nature and Wildlife</title>
+	<topdocs>tdcategory/nature-wildlife</topdocs>
+	<thumbnail>special://home/addons/plugin.video.digibox/resources/media/Docs_new.png</thumbnail>
+</dir>
+
+<dir>
+	<title>Performing Arts</title>
+	<topdocs>tdcategory/music-performing-arts</topdocs>
+	<thumbnail>special://home/addons/plugin.video.digibox/resources/media/Docs_new.png</thumbnail>
+</dir>
+
+<dir>
+	<title>Philosophy</title>
+	<topdocs>tdcategory/philosophy</topdocs>
+	<thumbnail>special://home/addons/plugin.video.digibox/resources/media/Docs_new.png</thumbnail>
+</dir>
+
+<dir>
+	<title>Politics</title>
+	<topdocs>tdcategory/politics</topdocs>
+	<thumbnail>special://home/addons/plugin.video.digibox/resources/media/Docs_new.png</thumbnail>
+</dir>
+
+<dir>
+	<title>Psychology</title>
+	<topdocs>tdcategory/psychology</topdocs>
+	<thumbnail>special://home/addons/plugin.video.digibox/resources/media/Docs_new.png</thumbnail>
+</dir>
+
+<dir>
+	<title>Religion</title>
+	<topdocs>tdcategory/religion</topdocs>
+	<thumbnail>special://home/addons/plugin.video.digibox/resources/media/Docs_new.png</thumbnail>
+</dir>
+
+<dir>
+	<title>Science</title>
+	<topdocs>tdcategory/science-technology</topdocs>
+	<thumbnail>special://home/addons/plugin.video.digibox/resources/media/Docs_new.png</thumbnail>
+</dir>
+
+<dir>
+	<title>Sexuality</title>
+	<topdocs>tdcategory/sex</topdocs>
+	<thumbnail>special://home/addons/plugin.video.digibox/resources/media/Docs_new.png</thumbnail>
+</dir>
+
+<dir>
+	<title>Society</title>
+	<topdocs>tdcategory/society</topdocs>
+	<thumbnail>special://home/addons/plugin.video.digibox/resources/media/Docs_new.png</thumbnail>
+</dir>
+
+<dir>
+	<title>Sports</title>
+	<topdocs>tdcategory/sports</topdocs>
+	<thumbnail>special://home/addons/plugin.video.digibox/resources/media/Docs_new.png</thumbnail>
+</dir>
+
+<dir>
+	<title>Technology</title>
+	<topdocs>tdcategory/technology</topdocs>
+	<thumbnail>special://home/addons/plugin.video.digibox/resources/media/Docs_new.png</thumbnail>
+</dir>

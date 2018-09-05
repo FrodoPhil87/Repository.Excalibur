@@ -1,0 +1,27 @@
+<dir>
+    <title>Kids list</title>
+    <link>file://Kidslist.xml</link>
+    <thumbnail>special://home/addons/plugin.video.digibox/resources/media/Movie_new.png</thumbnail>
+</dir>
+
+
+<dir>
+    <title>Every Disney Movie</title>
+    <link>file://Everydisney.xml</link>
+    <thumbnail>special://home/addons/plugin.video.digibox/resources/media/Movie_new.png</thumbnail>
+</dir>
+
+
+<dir>
+    <title>Anime/Animated</title>
+    <link>file://Anime.xml</link>
+    <thumbnail>special://home/addons/plugin.video.digibox/resources/media/Movie_new.png</thumbnail>
+</dir>
+
+
+
+<dir>
+    <title>Kids Boxsets</title>
+    <link>file://shared lists/kids_boxset.xml</link>
+    <thumbnail>special://home/addons/plugin.video.digibox/resources/media/Movie_new.png</thumbnail>
+</dir>

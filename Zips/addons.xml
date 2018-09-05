@@ -1,0 +1,1124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addons>
+<addon id="plugin.program.indigo" version="4.0.8" name="Indigo" provider-name="tvaddons">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+	</requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video executable</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py" start="startup"/>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Indigo is your gateway to the world of unofficial Kodi addons!</summary>
+        <description lang="en">Indigo is your gateway to the world of unofficial Kodi addons! Please visit www.tvaddons.co for support.</description>
+        <disclaimer lang="en">Kodi is a registered trademark of the XBMC Foundation. We are not connected to or in any other way affiliated with Kodi, Team Kodi, or the XBMC Foundation. Furthermore, any software, addons, or products offered by us will receive no support in official Kodi channels, including the Kodi forums and various social networks.</disclaimer>
+        <language>en</language>
+        <platform>all</platform>
+        <forum>https://www.tvaddons.co/forums</forum>
+        <website>https://www.tvaddons.co</website>
+        <source>https://github.com/tvaddonsco/plugin.program.indigo</source>
+    </extension>
+</addon>
+
+<addon id="plugin.program.reloadedtv" name="[COLOR red]Reloaded TV Guide[/COLOR]" version="1.0.1" provider-name="">
+
+	<requires>
+		<import addon="xbmc.python" version="2.19.0"/>
+		<import addon="script.module.simplejson" version="3.3.0"/>
+		<import addon="script.module.requests" version="2.9.1"/>
+		<import addon="script.module.pyxbmct" version="1.2.0"/>
+		<import addon="script.module.elementtree" version="1.2.7"/>
+		<import addon="script.module.addon.common" version="2.0.0"/>
+	</requires>
+
+	<extension point="xbmc.python.script" library="addon.py">
+            <provides>executable</provides>
+    </extension>
+
+    <extension point="xbmc.service" library="service.py" start="login"/>
+	<extension point="xbmc.addon.metadata">
+
+		<summary lang="en">[COLOR red]Reloaded TV Guide[/COLOR] with a fully working EPG</summary>
+		<summary lang="en_US">[COLOR red]Reloaded TV Guide[/COLOR] with a fully working EPG</summary>
+
+		<description lang="en"></description>
+		<description lang="en_US"></description>
+		<disclaimer>This guide is a forked version of TDB TV Guide which includes an amalgamation of code from Andys TV Guide, FTV Guide,
+On Tapp, Ivue and the original TV Guide by Twinthe.</disclaimer>
+		<language></language>
+		<platform>all</platform>
+		<license></license>
+		<forum></forum>
+		<website></website>
+		<email></email>
+	</extension>
+</addon>
+
+<addon id="plugin.video.AtTheFlix"
+       name="[COLORred]At The Flix[/COLOR]"
+       version="5.0.7.5"
+       provider-name="Maverick">
+    <requires>
+        <import addon="xbmc.python" version="2.19.0" />
+        <import addon="script.module.universalscrapers" version="1.0.0" />
+        <import addon="script.module.python.koding.aio" version="0.9.6.6" />
+        <import addon="script.module.beautifulsoup" version="3.2.1" />
+        <import addon="script.module.requests" version="2.9.1" />
+        <import addon="script.module.addon.common" version="2.0.0" />
+        <import addon="script.module.xmltodict" version="0.9.0" />
+		<import addon="plugin.video.youtube" version="3.0.0"/>
+        <!--<import addon="script.module.web-pdb" version="1.0"/>-->
+        <import addon="script.module.resolveurl" />
+		<import addon="script.module.ATFlive" />
+		<import addon="script.module.ATFmobdro" />
+		<import addon="script.module.ATFTV" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>audio video</provides>
+    </extension>
+	<extension point="xbmc.addon.metadata">
+    <reuselanguageinvoker>false</reuselanguageinvoker>
+    </extension>
+    <extension point="xbmc.service" library="service.py" start="[login|startup]" />
+    <extension point="xbmc.addon.metadata">
+       <summary lang="en">Maverick TV</summary>
+    <description lang="en">Maverick TV</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.ccloudtv"
+       name="cCloud TV"
+       version="1.5.6"
+       provider-name="rattlehead">
+  <requires>
+    <import addon="xbmc.python" version="2.19.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" />
+    <import addon="script.module.urlresolver"  version="3.0.0" optional="true"/>
+	<import addon="script.module.liveresolver"  version="0.1.28"/>
+	<import addon="script.module.addon.common" />
+	<import addon="script.module.simplejson" version="3.3.0"/>
+    <import addon="script.common.plugin.cache" version="2.5.5"/>
+    <import addon="script.tvaddons.debug.log" optional="true" />
+</requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>All the best from cCloud TV</summary>
+    <description>cCloud is an open source cloud based social IPTV service. It is built by the community for the community, where streaming is just a click away. Just click, play and stream. Yes, it's that simple. Just go to [COLOR blue]http://ccloudtv.org[/COLOR] and enjoy:) Please report any channels that are down here [COLOR blue]http://www.tiny.cc/reportchs[/COLOR] Users can now check servers status which can be found at [COLOR blue]http://ccloudtv.org/status[/COLOR]
+    </description>
+	<license>http://www.gnu.org/licenses/</license>
+    <forum>http://ccloudtv.org/forum</forum>
+    <website>http://ccloudtv.org</website>
+    <website>http://facebook.com/ccloudapp</website>
+    <website>http://twitter.com/ccloudapp</website>
+    <email></email>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.digibox" name="DigiBox" version="3.0" provider-name="digital and you know who">
+    <requires>
+        <import addon="xbmc.python" version="2.19.0" />
+        <import addon="script.module.universalscrapers" version="1.0.0" />
+        <import addon="script.module.python.koding.aio" version="0.9.6.6" />
+        <import addon="script.module.beautifulsoup" version="3.2.1" />
+        <import addon="script.module.requests" version="2.9.1" />
+        <import addon="script.module.addon.common" version="2.0.0" />
+        <import addon="script.module.xmltodict" version="0.9.0" />
+        <!--<import addon="script.module.web-pdb" version="1.0"/>-->
+        <import addon="script.module.resolveurl" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py" start="[login|startup]" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">DigiBox</summary>
+        <description lang="en">As of May, 2018 this is a community maintained template for learning purposes.</description>
+        <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
+        <platform>all</platform>
+        <website/>
+        <video_guide>https://youtu.be/0kFhoWahtFw</video_guide>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+    </extension>
+</addon>
+
+<addon id="plugin.video.elysium" version="2018.01.18" name="Elysium" provider-name="Elysium">
+    <requires>
+        <import addon="xbmc.python" version="2.19.0"/>
+        <import addon="script.elysium.artwork" version="2017.06.27"/>
+        <import addon="script.module.urlresolver" version="2.10.0"/>
+        <import addon="script.module.metahandler" version="2.9.0"/>
+        <import addon="script.module.requests" version="2.12.4"/>
+        <import addon="script.module.beautifulsoup" version="3.2.1"/>
+        <import addon="script.module.schism.common" version="2017.06.08"/>
+        <import addon="script.module.futures" version="2.2.0"/>
+        <import addon="script.module.nanscrapers" version="0.5.35"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="elysium.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Elysium movies and TV shows</summary>
+        <description lang="en">Watch movies and TV shows in high quality! Please note that this addon is not an official part of the Kodi media player and is therefore not to be mentioned within Kodi's official support channels. This addon has nothing to do with the media player itself, nor its intended use, it is simply a third party plugin which has been added to your system.</description>
+        <disclaimer lang="en">The author does not host any content, nor is he affiliated with any of the content providers.</disclaimer>
+        <platform>all</platform>
+        <news>New api-key / Replaced some lists / Removed channels / Credits and thanks for everything to Griffin 303</news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="plugin.video.exodus" version="6.0.0" name="Exodus" provider-name="Exodus">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0" />
+		<import addon="script.module.exodus" />
+		<import addon="script.exodus.artwork" />
+		<import addon="script.exodus.metadata" />
+		<import addon="script.module.resolveurl" />
+		<import addon="script.module.requests" />
+		<import addon="script.module.metahandler" version="1.0.0" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="exodus.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="startup" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Exodus</summary>
+		<description lang="en">Please visit [COLOR blue]www.tvaddons.co[/COLOR] for Exodus support and assistance! Kindly note that Exodus is not an official part of the media player you are running, and therefore not to be mentioned within official support channels, this addon has nothing to do with the media player itself, nor it’s intended use, it is simply a third party plugin which has been added to your system.</description>
+		<disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.</disclaimer>
+		<description lang="de">Bitte besuche [COLOR blue]www.tvaddons.co[/COLOR] für Unterstützung und Fragen zu Exodus! Beachte dabei, dass Exodus nicht offizieller Teil des Media Players ist den du gerade verwendest und daher nicht von dem offiziellen Support-Kanäle abgedeckt wird, dieses Addon hat nichts zu tun mit dem Media-Player selbst, noch ist es dafür beabsichtigt, es handelt sich hierbei lediglich um ein Drittanbieter-Anwendung die dem System hinzugefügt wurde.</description>
+		<disclaimer lang="de">Die von diesem Addon dargestellten Inhalte werden von den Erstellern des Addons weder gehostet oder verbreitet, noch stehen die Ersteller in irgendeiner Beziehung zu den Content-Anbietern.</disclaimer>
+		<description lang="fr">SVP visitez [COLOR blue]www.tvaddons.co[/COLOR] pour avoir de l'aide sur Exodus. Prenez note qu'Exodus n'est pas une partie intégrante de votre outil de visionnement multimedia et SVP ne le mentionnez pas dans les media sociaux officiels, cet addiciel n'a rien a voir avec votre lecteur multimedia lui même, c'est simplement un addiciel qui a été ajouté à votre système.</description>
+		<disclaimer lang="fr">L'auteur n'héberge pas ou ne distribue pas le contenu qui vous est affiché avec cet addiciel. L'auteur n'a pas d'alliance avec les distributeurs de contenu.</disclaimer>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<forum>https://www.tvaddons.co/forums/</forum>
+		<website>https://www.tvaddons.co/</website>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+    			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
+    			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
+    			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
+		</assets>
+		<news>
+v6.0.0 (JUN-2018)
+Even more Scraper Fixes
+CFSCRAPE Fix
+Moderator Disabled
+Fixed Trakt On Deck Magical Dissapearing Act
+Fixed search issue caused by character accents
+		</news>
+	</extension>
+</addon>
+
+<addon id="plugin.video.f4mTester" name="f4mTester" version="2.7.2" provider-name="Shani">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.video.F4mProxy" version="2.7.1"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>f4mTester</summary>
+        <description></description>
+        <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="plugin.video.genesis" version="2017.11.04" name="Genesis" provider-name="Genesis">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0" />
+		<import addon="script.module.genesis" />
+		<import addon="script.genesis.artwork" version="1.0.0" />
+		<import addon="script.genesis.metadata" version="1.0.0" />
+		<import addon="script.module.urlresolver" version="3.0.0" />
+		<import addon="script.module.metahandler" version="1.0.0" />
+		<import addon="plugin.program.indigo" />
+		<import addon="repository.exodus" />
+		<import addon="repository.xbmchub" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="genesis.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="startup" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Genesis</summary>
+		<description lang="en">Please visit [COLOR blue]www.tvaddons.co[/COLOR] for Genesis support and assistance! Kindly note that Genesis is not an official part of the media player you are running, and therefore not to be mentioned within official support channels, this addon has nothing to do with the media player itself, nor it’s intended use, it is simply a third party plugin which has been added to your system.</description>
+		<disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.</disclaimer>
+		<description lang="de">Bitte besuche [COLOR blue]www.tvaddons.co[/COLOR] für Unterstützung und Fragen zu Genesis! Beachte dabei, dass Genesis nicht offizieller Teil des Media Players ist den du gerade verwendest und daher nicht von dem offiziellen Support-Kanäle abgedeckt wird, dieses Addon hat nichts zu tun mit dem Media-Player selbst, noch ist es dafür beabsichtigt, es handelt sich hierbei lediglich um ein Drittanbieter-Anwendung die dem System hinzugefügt wurde.</description>
+		<disclaimer lang="de">Die von diesem Addon dargestellten Inhalte werden von den Erstellern des Addons weder gehostet oder verbreitet, noch stehen die Ersteller in irgendeiner Beziehung zu den Content-Anbietern.</disclaimer>
+		<description lang="fr">SVP visitez [COLOR blue]www.tvaddons.co[/COLOR] pour avoir de l'aide sur Genesis. Prenez note qu'Genesis n'est pas une partie intégrante de votre outil de visionnement multimedia et SVP ne le mentionnez pas dans les media sociaux officiels, cet addiciel n'a rien a voir avec votre lecteur multimedia lui même, c'est simplement un addiciel qui a été ajouté à votre système.</description>
+		<disclaimer lang="fr">L'auteur n'héberge pas ou ne distribue pas le contenu qui vous est affiché avec cet addiciel. L'auteur n'a pas d'alliance avec les distributeurs de contenu.</disclaimer>
+		<platform>all</platform>
+		<forum>https://www.tvaddons.co/forums/</forum>
+		<website>https://www.tvaddons.co/</website>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
+		</assets>
+		<news></news>
+	</extension>
+</addon>
+
+<addon id="plugin.video.jukeboxhero" name="JukeboxHero" version="1.0.4" provider-name="Dandymedia">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.addon.common" />
+	<import addon="script.module.requests" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video audio</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+	<summary lang="en">Music Playlists</summary>
+	<description lang="en">Direct playlists from youtube using other sites to index and then searching youtube for playlist content.[CR][CR]You will need the Youtube addon installed.</description>
+	<disclaimer lang="en"></disclaimer>
+	<platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.live.streamspro"
+       name="LiveStreamsPro"
+       version="2.8.1"
+       provider-name="Shani">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.liveresolver" version="0.1.24" optional="true"/>
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" optional="true" />
+    <import addon="script.module.urlresolver" optional="true"/>
+    <import addon="script.module.simplejson" />
+     <import addon="script.module.livestreamer" optional="true"/>
+     <import addon="script.module.pyamf" optional="true"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+
+
+  <extension point="xbmc.addon.metadata">
+    <summary>livestreamspro- shamelessly forked from livestreams but added many thinks</summary>
+    <description>
+        In addition to what livestreams allowed you to do, you can now,
+        1. call regex in regex,
+        2. multiple regex in page, regex in session, also htmlunescape responses
+        3. create session from one regex and pass onto next in line
+        4. save sessions to a file and open again later
+        5. write python code in .py file, put in the profile directory and then call from your regex.
+        6. use epoctime, guid and unpack as functions already defined.
+        7. Use it to post values to the pages to get the proper responses
+        8. support many headers, like origin, X-Requested-With
+        9. you can now append cookies in response and then read in regex using includeheaders
+        10. You can now link to another web url via your xml using externallink
+        11. support for google captcha, now you can show and then post the text
+
+    </description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.live247" name="[COLOR cornflowerblue][B]Live[/B][/COLOR][COLOR magenta][B] 24/7[/B][/COLOR]" version="2.2" provider-name="Digital">
+    <requires>
+        <import addon="xbmc.python" version="2.19.0" />
+        <import addon="script.module.universalscrapers" version="1.0.0" />
+        <import addon="script.module.python.koding.aio" version="0.9.6.6" />
+        <import addon="script.module.beautifulsoup" version="3.2.1" />
+        <import addon="script.module.requests" version="2.9.1" />
+        <import addon="script.module.addon.common" version="2.0.0" />
+		<import addon="script.module.swiftstreamz" version="8" />
+		<import addon="script.module.digital.net" version="1.0" />
+        <import addon="script.module.xmltodict" version="0.9.0" />
+        <!--<import addon="script.module.web-pdb" version="1.0"/>-->
+        <import addon="script.module.resolveurl" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py" start="[login|startup]" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">[COLOR cornflowerblue]Live 24/7[/COLOR]</summary>
+        <description lang="en">As of May, 2018 this is a community maintained template for learning purposes.</description>
+        <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
+        <platform>all</platform>
+        <website/>
+        <video_guide>https://youtu.be/0kFhoWahtFw</video_guide>
+    </extension>
+</addon>
+
+<addon id="plugin.video.MaverickTV"
+       name="[COLOR lime]Maverick TV[/COLOR]"
+       version="9.1.4.3"
+       provider-name="Maverick">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.t0mm0.common" version="2.0.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" version="3.0.0"/>
+    <import addon="script.module.urlresolver" optional="true"/>
+	<import addon="script.module.resolveurl" version="5.0.00"/>
+    <import addon="script.module.simplejson" />
+    <import addon="script.common.plugin.cache" version="2.5.2"/>
+    <import addon="script.module.metahandler" version="2.5.1"/>
+    <import addon="script.module.python.koding.aio" version="0.9.6.6"/>
+    <import addon="script.module.web-pdb" version="1.0"/>
+	<import addon="script.module.ATFmobdro" />
+	<import addon="script.module.jokerHD" />
+
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Maverick TV</summary>
+    <description lang="en">Maverick TV</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.neptune" version="1.4.9" name=" Neptune Rising" provider-name="Mr. Blamo">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0" />
+		<import addon="script.neptune.artwork" />
+		<import addon="script.neptune.metadata" />
+                <import addon="script.module.resolveurl"/>
+                <import addon="script.module.metahandler"/>
+                <import addon="script.module.requests"/>
+                <import addon="script.module.beautifulsoup"/>
+                <import addon="script.module.schism.common"/>
+                <import addon="script.module.futures"/>
+        		<import addon="script.module.universalscrapers" version="1.0.0" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="neptune.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="startup" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Neptune Rising</summary>
+		<description lang="en">Movie, TV Show, and Playlist Add-on</description>
+        <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.
+The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.
+This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.
+</disclaimer>
+		<platform>all</platform>
+		<license>Beerware rev. 42</license>
+		<platform>all</platform>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+		<forum></forum>
+		<website></website>
+		<source></source>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+		<news></news>
+	</extension>
+</addon>
+
+<addon id="plugin.video.now_music" name="[COLOR blue]N[/COLOR]ow [COLOR red]M[/COLOR]usic"	version="2.1.8"	provider-name="Pulse Builds">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.addon.common" version="2.0.0"/>
+    <import addon="plugin.video.youtube" version="5.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="pulse.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Now Thats What I Call Music Collection</summary>
+    <description lang="en">All Content In This Addon Is Freely Available On The Internet</description>
+    <disclaimer lang="en">Please Use Genuine PULSE Addons From Genuine Sources</disclaimer>
+    <platform>all</platform>
+    <forum>n/a</forum>
+    <website>n/a</website>
+  </extension>
+</addon>
+
+<addon id="plugin.video.now_music_usa" name="[COLOR blue]N[/COLOR]ow [COLOR red]M[/COLOR]usic [COLOR white]U[/COLOR]SA"	version="1.0.8"	provider-name="Pulse Builds">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.addon.common" version="2.0.0"/>
+    <import addon="plugin.video.youtube" version="5.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="pulse.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Now Thats What I Call Music USA Collection</summary>
+    <description lang="en">All Content In This Addon Is Freely Available On The Internet</description>
+    <disclaimer lang="en">Please Use Genuine PULSE BUILDS And Addons From Genuine Sources</disclaimer>
+    <platform>all</platform>
+    <forum>n/a</forum>
+    <website>n/a</website>
+  </extension>
+</addon>
+
+<addon id="plugin.video.placenta" version="1.4.5" name="Placenta" provider-name="Team Afterbirth">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0" />
+		<import addon="script.module.placenta" />
+		<import addon="script.placenta.artwork" />
+		<import addon="script.placenta.metadata" />
+		<import addon="script.module.resolveurl" />
+		<import addon="script.module.requests" />
+		<import addon="script.module.metahandler" />
+        <import addon="plugin.video.youtube"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+        <provides>audio</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="startup" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Placenta</summary>
+		<description>Covenant Fork from Echo/Colossus era with Team Afterbirth's updates and new code.</description>
+        <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.
+The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.
+This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.
+</disclaimer>
+		<platform>all</platform>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+		<license>Beerware rev. 42</license>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+    			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
+    			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
+    			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
+    			<screenshot>resources/screenshots/screenshot-04.jpg</screenshot>
+		</assets>
+		<news></news>
+	</extension>
+</addon>
+
+<addon id="plugin.video.reboot"
+       name="[COLOR red]GEARS[COLOR white] TV[/COLOR]"
+       version="112"
+       provider-name="Mayfair">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.requests" version="2.12.4"/>
+    <import addon="script.module.pyxbmct" version="1.2.0"/>
+    <import addon="script.module.elementtree" version="1.2.8"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">[COLOR red]GEARS[COLOR white] TV[/COLOR]</summary>
+    <language>en</language>
+    <description lang="en">LIFE IS TOUGHER WHEN IT BUFFERS -[COLOR red]GEARS[COLOR white] TV[/COLOR]</description>
+     <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.reloadedtv"
+       name="[COLOR white]Reloaded [/COLOR][COLOR red]TV[/COLOR]"
+       version="1.0.1"
+       provider-name="">
+  <requires>
+    <import addon="xbmc.python" version="2.19.0"/>
+    <import addon="script.module.requests" version="2.7.0"/>
+    <import addon="script.module.elementtree" version="1.2.8"/>
+    <import addon="plugin.program.reloadedtv" version="1.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Reloaded TV</summary>
+    <description lang="en">Reloaded TV</description>
+    <platform>all</platform>
+    <language>en</language>
+    <license></license>
+    <source></source>
+    <forum></forum>
+    <disclaimer lang="en"></disclaimer>
+  </extension>
+</addon>
+
+<addon id="plugin.video.SkyNet"
+       name="[COLOR white]SkyNet[/COLOR]"
+       version="5.0.2"
+       provider-name="SkyNet">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.t0mm0.common" version="2.0.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" version="3.0.0"/>
+    <import addon="script.module.urlresolver" optional="true"/>
+	<import addon="script.module.resolveurl" version="5.0.00"/>
+    <import addon="script.module.simplejson" />
+    <import addon="script.common.plugin.cache" version="2.5.2"/>
+    <import addon="script.module.metahandler" version="2.5.1"/>
+    <import addon="script.module.python.koding.aio" version="0.9.6.6"/>
+    <import addon="script.module.web-pdb" version="1.0"/>
+
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">SkyNet</summary>
+    <description lang="en">SkyNet</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon
+  id="plugin.video.SportsDevil"
+  version="2018.06.23"
+  name="SportsDevil"
+  provider-name="SportsDevil">
+  <requires>
+   <import addon="xbmc.python" version="2.14.0"/>
+   <import addon="script.module.dateutil" />
+   <import addon="script.module.simplejson" />
+   <import addon="script.module.six" />
+   <import addon="script.module.requests" />
+   <import addon="plugin.video.f4mTester" />
+  </requires>
+  <extension
+    point="xbmc.python.pluginsource"
+    library="default.py">
+   <provides>video</provides>
+  </extension>
+  <!-- <extension point="xbmc.service" library="service/streamlink_proxy.py" /> -->
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">SportsDevil</summary>
+    <description lang="en">[I]There can only be one.[/I][CR][CR]Unofficial Kodi Addon.</description>
+    <disclaimer lang="en">There can only be one.</disclaimer>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+      <platform>all</platform>
+        <website/>
+        <video_guide>https://youtu.be/0kFhoWahtFw</video_guide>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+    </extension>
+</addon>
+
+<addon id="plugin.video.spotitube" name="Youtube Music" version="2.1.1" provider-name="realvito (inspired by L0RE)">
+	<requires>
+		<import addon="xbmc.python" version="2.24.0"/>
+		<import addon="plugin.video.youtube" version="5.3.7"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video audio</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="de">Musik über Youtube abspielen</summary>
+		<summary lang="en">Play Music via Youtube</summary>
+		<description lang="de">@realvito[CR]Musik aus verschiedenen Quellen z.B. Billboard, iTunes, Spotify etc. auswählen und über Youtube abspielen.[CR][CR]Für mehr Informationen zu allen Neuerungen siehe - CHANGELOG.[CR]     TEST IT AND LIKE IT</description>
+		<description lang="en">@realvito[CR]Choose Music from different sources e.g. Billboard, iTunes, Spotify etc. and play it via Youtube.[CR][CR]For more information about all new features see - CHANGELOG.[CR]     TEST IT AND LIKE IT</description>
+		<disclaimer lang="de">Die von diesem Addon dargestellten Inhalte werden von den Erstellern des Addons weder gehostet oder verbreitet, noch stehen die Ersteller in irgendeiner Beziehung zu den Anbietern des Inhalts.</disclaimer>
+		<disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content providers.</disclaimer>
+		<language></language>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+		<forum>http://www.kodinerds.net/index.php/Thread/47087-Release-YoutubeMusic-patched/</forum>
+		<website></website>
+		<email></email>
+		<source>https://github.com/kodinerds/repo/tree/master/plugin.video.spotitube</source>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+		<news>[B][COLOR orangered]Version 2.1.1  (22.06.2018)[/COLOR][/B] by realvito[CR]
+- fixed: Videolists under "SPOTIFY - Regional" are emty (Website changes)
+- removed: Regional in German-DJ-Playlist International (don't exist anymore)
+		</news>
+	</extension>
+</addon>
+
+<addon id="plugin.video.streamsRus"
+       name="[COLOR red]Streams[/COLOR][COLOR white]R[/COLOR][COLOR red]Us[/COLOR]"
+       version="1.0.1"
+       provider-name="StreamsRus">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.requests"/>
+    <import addon="script.module.urlresolver"/>
+    <import addon="script.module.beautifulsoup4" />
+
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en"></summary>
+    <language>en</language>
+    <description lang="en"></description>
+     <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.Yoda" version="1.1.3" name="Yoda" provider-name="Yoda">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0" />
+		<import addon="script.module.Yoda" />
+		<import addon="script.Yoda.artwork" version="1.0.5" />
+		<import addon="script.Yoda.metadata" version="1.0.0" />
+		<import addon="script.module.resolveurl" version="5.0.0" />
+		<import addon="script.module.requests" />
+		<import addon="script.module.metahandler" version="1.0.0" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="Yoda.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="startup" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Yoda</summary>
+		<description lang="en">[COLOR aqua]Yoda Movies and TV. This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels. The author does not host any of the content in this addon and takes no responsibility for content found[/COLOR].</description>
+		<disclaimer lang="en">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<assets>
+			<icon>icon.jpg</icon>
+			<fanart>fanart.png</fanart>
+    			<screenshot>resources/screenshots/screenshot-01.png</screenshot>
+    			<screenshot>resources/screenshots/screenshot-02.png</screenshot>
+    			<screenshot>resources/screenshots/screenshot-03.png</screenshot>
+		</assets>
+		<news></news>
+	</extension>
+</addon>
+
+<addon id="plugin.video.youtube" name="YouTube" version="6.1.3" provider-name="bromix">
+    <requires>
+        <import addon="xbmc.python" version="2.20.0"/>
+        <import addon="script.module.six"/>
+        <import addon="script.module.requests" version="2.12.4"/>
+        <import addon="script.module.inputstreamhelper" version="0.2.2" optional="true"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="resources/lib/default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.service" library="resources/lib/startup.py" start="login"/>
+    <extension point="xbmc.python.module" library="resources/lib/"/>
+    <extension point="xbmc.addon.metadata">
+        <news>
+6.1.3
+[fix] timedelta.total_seconds python 2.6 compat.
+
+6.1.2
+[fix] dash settings check and defaults
+[fix] addon-check raised warning for services complex entry point
+[fix] codacy raised issue in http server (https://app.codacy.com/app/Kodi/repo-plugins/pullRequest?prid=2080401)
+[chg] move seek to onPlayBackStarted, onAVStarted only in K18
+[chg] geolocation provider changed from ipstack to ip-api
+[del] frodo listitem art compatibility
+[lang] ru_ru strings |contrib: Burgaduk|
+[lang] zh_tw strings |contrib: Zankio|
+
+6.1.1
+[fix] http proxy using incorrect setting id causing 403 errors
+
+6.1.0
+[add] Multi-user support
+    - Switch User folder (default: on) Settings -&gt; Folders
+    - User management (Add, Remove, Rename, Switch) Settings - Users
+    - Signed in users are green, Current user has an *
+[add/upd] add data cache and optimize caching
+    - add Settings -&gt; Maintenance -&gt; Clear data cache/Delete data cache
+    - increase allowed cache size
+    - database accesses per 50 videos: before: 70~100 after: 4~6
+    - load time of 50 videos w/ no cached videos: before: ~11.6 secs, after: ~3 secs
+    - load time of 50 videos w/ all cached videos: before: ~0.8 secs, after: ~0.7 secs
+    - cached size per 50 videos: before ~1MB, after ~550KB
+[add] Refresh after watching (default: off) Settings -&gt; General
+[add] Completed Live folder (default: on) Settings -&gt; Folders
+[add] Upcoming Live folder (default: on) Settings -&gt; Folders
+[add] My Location folder (default: on) Settings -&gt; Advanced -&gt; Enable setup-wizard
+[add] Play count minimum percent (default: 85%) Settings -&gt; General -&gt; Play count minimum percent
+[add] Playback history (default: off) Settings -&gt; Advanced -&gt; Use playback history
+[add] Time since published for videos as item properties Property(PublishedSince), Property(PublishedLocal) |contrib: pannal|
+[add] Check My IP, Settings -&gt; HTTP Server
+[add] Developer authentication, allowing add-ons to use their own access tokens
+    - see youtube_authentication.py, youtube_registration.py, youtube_requests.py, and youtube_resolver.py
+[upd] YouTube UTC datetimes to local timezone |contrib: pannal|
+[upd] Localize API key errors, provide a more descriptive notification
+[fix] Add to YouTube watch history
+[fix] My Channel videos (Error 403)
+[fix] allow fallback to dash, when using Audio only
+[fix] Signature function not found error for some users
+[fix] Context Menu -&gt; More -&gt; Related Videos w/ Kodi 18
+[fix] Sign In/Sign Out causing crash with Kodi 18 nightlies
+[fix] Channel &#39;mine&#39; caching
+[fix] Time changing when playing generated dash
+[lang] es_es strings |contrib: roliverosc|
+[lang] el_gr strings |contrib: twilight0|
+[lang] nl_nl strings |contrib: Markman-B|
+        </news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+        <summary lang="en_GB">Plugin for YouTube</summary>
+        <description lang="en_GB">YouTube is one of the biggest video-sharing websites of the world.</description>
+        <disclaimer lang="en_GB">This plugin is not endorsed by Google</disclaimer>
+        <summary lang="he_IL">תוסף עבור YouTube</summary>
+        <description lang="he_IL">YouTube הוא אחד מאתרי שיתוף הווידאו הגדולים בעולם.</description>
+        <summary lang="de_DE">Plugin für YouTube</summary>
+        <description lang="de_DE">YouTube ist eines der größten Video-Sharing-Websites der Welt.</description>
+        <summary lang="pl_PL">Wtyczka YouTube</summary>
+        <description lang="pl_PL">YouTube jest jednym z największych na świecie serwisów udostępniania wideo.</description>
+        <summary lang="hu_HU">YouTube kiegészítő</summary>
+        <description lang="hu_HU">A YouTube világ egyik legnagyobb videómegosztó weboldala.</description>
+        <summary lang="es_ES">Plugin para YouTube</summary>
+        <description lang="es_ES">YouTube es uno de los mayores sitios web de intercambio de vídeos del mundo.</description>
+        <disclaimer lang="es_ES">Este add-on no esta respaldado por Google</disclaimer>
+        <summary lang="ru_RU">Видеодополнение YouTube</summary>
+        <description lang="ru_RU">YouTube - популярнейший видеохостинговый сайт, предоставляющий пользователям услуги хранения, доставки и показа видео.</description>
+        <summary lang="fr_FR">Plugin pour YouTube</summary>
+        <description lang="fr_FR">YouTube est l'un des plus grands sites de partage vidéos du monde.</description>
+        <summary lang="zh_CN">YouTube附加元件</summary>
+        <description lang="zh_CN">「Youtube」是全世界最大的影片分享網站</description>
+        <summary lang="zh_TW">YouTube附加元件</summary>
+        <description lang="zh_TW">「Youtube」是全世界最大的影片分享網站</description>
+        <disclaimer lang="zh_TW">此附加元件未由Google支持</disclaimer>
+        <summary lang="bg_BG">Добавка за YouTube</summary>
+        <description lang="bg_BG">YouTube е един от най-големите уеб сайтове за споделяне на видео в целия свят.</description>
+        <summary lang="el_GR">Πρόσθετο YouTube</summary>
+        <description lang="el_GR">Το YouTube είναι μία από τις μεγαλύτερες ιστοσελίδες διαμοιρασμού βίντεο στον κόσμο.</description>
+        <disclaimer lang="el_GR">Η παρούσα μικροεφαρμογή δεν έχει υϊοθετηθεί από την Google</disclaimer>
+        <summary lang="nb_NO">Tillegg for YouTube</summary>
+        <description lang="nb_NO">YouTube er en av verdens største nettsider for videodeling.</description>
+        <language></language>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+        <forum>https://forum.kodi.tv/showthread.php?tid=325740</forum>
+        <website>https://www.youtube.com</website>
+        <email>ytplugin at datanet dot ws</email>
+        <source>https://github.com/jdf76/plugin.video.youtube</source>
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+    </extension>
+</addon>
+
+<addon id="plugin.video.ytchannels" name="Youtube Channels" version="0.1.4" provider-name="natko1412">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+		<import addon="script.module.beautifulsoup" version="3.2.1"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Watch your favourite youtube channels</summary>
+		<description lang="en">Watch your favourite youtube channels and organize them in folders.</description>
+
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="plugin.video.ytlive"
+	name="Youtube Live Channels"
+	version="1.0.3"
+	provider-name="kodi senyor">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.addon.common" version="2.0.0"/>
+    <import addon="plugin.video.youtube" version="5.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Youtube live streams</summary>
+    <description lang="en">credits to coldkeys for the code used in this addon
+	</description>
+    <platform>all</platform>
+    <forum>n/a</forum>
+    <website>n/a</website>
+  </extension>
+</addon>
+
+<addon id="repository.Excalibur" name="Excalibur" version="1.0" provider-name="Ex">
+	<extension point="xbmc.addon.repository" name="Excalibur Repository">
+		<dir>
+			<info compressed="false">https://raw.githubusercontent.com/noobsandnerds/modules4all/master/zips/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/noobsandnerds/modules4all/master/zips/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/noobsandnerds/modules4all/master/zips/</datadir>
+		</dir>
+		<info compressed="false">https://raw.githubusercontent.com/FrodoPhil87/repository.Excalibur/master/zips/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/FrodoPhil87/repository.Excalibur/master/zips/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/FrodoPhil87/repository.Excalibur/master/zips/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Excalibur Repo</summary>
+		<description lang="en">Ex Repo</description>
+		<genre></genre>
+	</extension>
+</addon>
+
+<addon id="skin.aeon.nox.silvo" version="6.1.3" name="Aeon Nox: SiLVO" provider-name="SiLVO">
+	<requires>
+		<import addon="xbmc.gui" version="5.13.0"/>
+		<import addon="script.grab.fanart" version="0.12.8"/>
+		<import addon="script.skinshortcuts" version="1.0.10"/>
+		<import addon="service.library.data.provider" version="0.0.7"/>
+		<import addon="resource.images.studios.white" version="0.0.1"/>
+		<import addon="resource.images.recordlabels.white" version="0.0.1"/>
+	</requires>
+	<extension point="xbmc.gui.skin" debugging="false" effectslowdown="0.75">
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="16x9" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="de_DE">Erstellt von BigNoid, modifiziert von SiLVO, Widgets von Mr. V</summary>
+		<summary lang="el_GR">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="en_AU">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="en_GB">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="en_NZ">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="en_US">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="es_ES">Creada por BigNoid, Modificada por SiLVO, y Widgets por Mr. V</summary>
+		<summary lang="fi_FI">BigNoidin tekemä ja SILVOn muokkaama. Widgetit Mr. V:ltä</summary>
+		<summary lang="fr_CA">Créé par BigNoid, modifié by SiLVO, et widgets par Mr. V</summary>
+		<summary lang="fr_FR">Créé par BigNoid, Moddé par SiLVO, avec les widgets de Mr V</summary>
+		<summary lang="gl_ES">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="he_IL">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="hu_HU">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="is_IS">Útbúið af BigNoid, breytt af SiLVO, viðmótshlutar eftir Mr. V</summary>
+		<summary lang="it_IT">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="ko_KR">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="lt_LT">Sukūrė BigNoid, modifikavo SiLVO bei valdiklius pridėjo Mr. V</summary>
+		<summary lang="ms_MY">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="nb_NO">Laget av BigNoid, modifisert av SiLVO, og miniprogrammer av Mr. V.</summary>
+		<summary lang="nl_NL">Ontwikkeld door BigNoid, aangepast door SiLVO, en Widgets door Mr. V</summary>
+		<summary lang="pl_PL">Stworzona przez BigNoid, zmodyfikowana przez SiLVO, a gadżety autorstwa Mr. V</summary>
+		<summary lang="pt_BR">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="pt_PT">Criado por BigNoid, Modded por SiLVO, e Widgets por Mr. V</summary>
+		<summary lang="ro_RO">Creat de BigNoid, Modificat de SiLVO, și widget-uri deMr. V</summary>
+		<summary lang="ru_RU">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="sk_SK">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="sv_SE">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="th_TH">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="tr_TR">BigNoid tarafından oluşturuldu; Modlar SILVO'dan, Widget'lar Mr. V'den.</summary>
+		<summary lang="vi_VN">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V - Sự trở về</summary>
+		<summary lang="zh_CN">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="zh_TW">由BigNoid原創，SiLVO進行改造，以及由Mr. V製作的小工具</summary>
+		<description lang="de_DE">Komplett neu designed für ein modernes Aussehen und das klassische Aeon-Feeling beizubehalten.</description>
+		<description lang="el_GR">Πλήρως επανασχεδιασμένο για να προσφέρει μια μοντέρνα αισθητική, διατηρώντας ταυτόχρονα την κλασική ομορφιά του Aeon.</description>
+		<description lang="en_AU">Completely redesigned to create a modern look, while retaining the classic Aeon feel.</description>
+		<description lang="en_GB">Completely redesigned to create a modern look, while retaining the classic Aeon feel.</description>
+		<description lang="en_NZ">Completely redesigned to create a modern look, while retaining the classic Aeon feel.</description>
+		<description lang="en_US">Completely redesigned to create a modern look, while retaining the classic Aeon feel.</description>
+		<description lang="es_ES">Completamente rediseñado para crear un aspecto moderno, pero conservando el toque clásico Aeon.</description>
+		<description lang="fi_FI">Täysin uudelleensuunniteltu moderni ulkoasu, kuitenkin tuntuen klassiselta Aeonilta.</description>
+		<description lang="fr_CA">Complètement remanié pour créer une apparence moderne, tout en conservant l'esprit classique d'Aeon.</description>
+		<description lang="fr_FR">Totalement revu pour créer un look moderne, en gardant l'expérience Aeon.</description>
+		<description lang="gl_ES">Redeseñado completamente para crear unha aparencia moderna ao tempo que mantén a sensación do clásico Aeon.</description>
+		<description lang="he_IL">עיצוב חדש היוצר מראה מודרני אך משמר את ההרגשה של Aeon הקלאסי.</description>
+		<description lang="hr_HR">Potpuno preoblikovan moderan izgled, uz zadržani klasični Aeon osjećaj.</description>
+		<description lang="hu_HU">Teljesen áttervezett modern kinézet, de megtartva a klasszikus Aeon érzetet.</description>
+		<description lang="is_IS">Endurhannað nútímalegt útlit í anda Aeon.</description>
+		<description lang="it_IT">Completamente ridisegnato per creare un look moderno, mantenendo la consueta qualità Aeon.</description>
+		<description lang="ko_KR">고전적인 Aeon 느낌을 유지하면서 현대적인 모습으로 완전히 다시 디자인하여 만들었습니다.</description>
+		<description lang="lt_LT">Pilnai atnaujinta, kad sukurtų modernią išvaizdą, išlaikant klasikinio Aeon pojūtį.</description>
+		<description lang="ms_MY">Direka semula sepenuhnya untuk hasilkan penampilan modern, tetapi masih mengekalkan penampilan Aeon klasik.</description>
+		<description lang="nb_NO">Helt redesignet for å tilby en moderne utforming, samtidig som den klassiske Aeon-følelsen er beholdt.</description>
+		<description lang="nl_NL">Volledig opnieuw ontworpen om een ​​moderne look te creëren, met behoud van het klassieke Aeon gevoel.</description>
+		<description lang="pl_PL">Całkowicie przeprojektowana skóra Aeon, o nowoczesnym wyglądzie, zachowując klasyczny układ skóry Aeon.</description>
+		<description lang="pt_BR">Design completamente novo para criar um look moderno, mantendo o feeling do Aeon Clássico.</description>
+		<description lang="pt_PT">Completamente redesenhado para criar um visual moderno enquanto retém o toque clássico Aeon.</description>
+		<description lang="ro_RO">Complet reproiectat pentru a crea o înfățișare modernă, dar totuși păstrând atmosfera clasică Aeon.</description>
+		<description lang="ru_RU">полностью переделенная, модернизированная классическая обложка Aeon.</description>
+		<description lang="sk_SK">Kompletne prepracovaný dizajn s moderným vzhľadom pri zachovaní klasického štýlu Aeon.</description>
+		<description lang="sv_SE">Totalt omarbetad för att skapa ett modernt utseende, samtidigt som man behåller den klassiska Aeon-känslan.</description>
+		<description lang="th_TH">การออกแบบใหม่หมดจด เพื่อสร้างรูปลักษณ์ทันสมัย, ​​ขณะที่ยังคงความรู้สึกคลาสสิคของ Aeon.</description>
+		<description lang="tr_TR">Modern görünüme kavuşturmak için baştan tasarlandı, klasik Aeon hissi korundu</description>
+		<description lang="vi_VN">Thiết kế lại hoàn toàn để tạo nên một phong cách hiện đại, trong khi đó vẫn duy trì một cảm giác Aeon cổ điển.</description>
+		<description lang="zh_TW">完全的翻新設計以創造現代化的視覺感受，同時仍維持Aeon的經典外觀。</description>
+		<platform>all</platform>
+		<license>CC BY-NC-SA 4.0</license>
+		<forum>http://forum.kodi.tv/showthread.php?tid=210069</forum>
+		<website>https://github.com/mikesilvo164/Aeon-Nox-SiLVO</website>
+		<source>https://github.com/mikesilvo164/Aeon-Nox-SiLVO</source>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-04.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-05.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-06.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-07.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-08.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-09.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-10.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-11.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-12.jpg</screenshot>
+		</assets>
+		<news>[B]Based on [I]v6.0.1[/I]  of Aeon Nox 5[/B][CR][I]All Versions[/I][CR]- Misc fixes, changes, and/or improvements[CR][I]v6.1.3[/I][CR]- Update skin for latest Leia skin engine changes[CR]- Add Artwork Beef support[CR]- Compatibility for Global Search v8+ and drop support for older versions[CR]- [CR][I]v6.1.2[/I][CR]- Move Video OSD buttons above seekbar[CR]- Update VideoLyrics mod (thanks manfeed)[CR]- Misc PVR fixes and adjustments[CR]- Resize FSK rating images to fit in DialogVideoInfo[CR]- Fixes for Rottentomatoes and Metacritic images and INFOlabels[CR]- Fullscreen Info updates, fixes, and changes[CR]- Use script.colorbox for blur in information dialogs[CR]- Rework DialogMusicInfo[CR][CR]For a full list of changes visit https://github.com/mikesilvo164/Aeon-Nox-SiLVO/commits/master</news>
+	</extension>
+</addon>
+
+<addon id="weather.yahoo" name="Yahoo! Weather" version="4.3.1" provider-name="ronie">
+	<requires>
+		<import addon="xbmc.python" version="2.25.0"/>
+	</requires>
+	<extension point="xbmc.python.weather" library="default.py"/>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="af">Weervoorspelling van yahoo.com</summary>
+		<summary lang="am">የ አየር ንብረት ከ ያሁ.ኮም</summary>
+		<summary lang="ar">تنبؤات الطقس من موقع yahoo.com</summary>
+		<summary lang="bg">Синоптична прогноза от www.yahoo.com</summary>
+		<summary lang="ca">Previsió del temps des de yahoo.com</summary>
+		<summary lang="cs">Předpověď počasí z yahoo.com</summary>
+		<summary lang="da">Vejrudsigt fra yahoo.com</summary>
+		<summary lang="de">Wettervorhersage von yahoo.com</summary>
+		<summary lang="el">Πρόγνωση καιρού από το yahoo.com</summary>
+		<summary lang="en">Weather forecast from yahoo.com</summary>
+		<summary lang="en_NZ">Weather forecast from yahoo.com</summary>
+		<summary lang="en_US">Weather forecast from yahoo.com</summary>
+		<summary lang="es">Predicción meteorológica de yahoo.com</summary>
+		<summary lang="et">yahoo.com ilmaennustus</summary>
+		<summary lang="fi">Yahoo.com sääennuste</summary>
+		<summary lang="fr">Prévisions météo depuis yahoo.com</summary>
+		<summary lang="fr_CA">Prévisions météorologiques de yahoo.com</summary>
+		<summary lang="gl">Predición meteorolóxica de yahoo.com</summary>
+		<summary lang="he">תחזית מזג אוויר מ-yahoo.com</summary>
+		<summary lang="hr">Prognoza vremena sa yahoo.com</summary>
+		<summary lang="hu">Időjárás előrejelzés a yahoo.com oldalról</summary>
+		<summary lang="id">Ramalan Cuaca dari yahoo.com</summary>
+		<summary lang="is">Veðurspá frá yahoo.com</summary>
+		<summary lang="it">Servizio meteo di yahoo.com</summary>
+		<summary lang="ja">yahoo.com 天気予報</summary>
+		<summary lang="ko">yahoo.com 일기예보</summary>
+		<summary lang="lt">Orų prognozė iš yahoo.com</summary>
+		<summary lang="lv">Laikapstākļu prognoze no yahoo.com</summary>
+		<summary lang="nl">Weerbericht van yahoo.com</summary>
+		<summary lang="no">Værvarsel fra yahoo.com</summary>
+		<summary lang="pl">Prognoza pogody z serwisu yahoo.com</summary>
+		<summary lang="pt">Previsão do tempo a partir de yahoo.com</summary>
+		<summary lang="pt_BR">Previsão Climática de yahoo.com</summary>
+		<summary lang="ro">Prognoze meteo de la yahoo.com</summary>
+		<summary lang="ru">Прогноз погоды от yahoo.com</summary>
+		<summary lang="sk">Predpoveď počasia z yahoo.com</summary>
+		<summary lang="sl">Vremenska napoved iz yahoo.com</summary>
+		<summary lang="sr_RS">Прогноза времена са yahoo.com</summary>
+		<summary lang="sv">Väderprognos från yahoo.com</summary>
+		<summary lang="tr">Hava durumu - yahoo.com</summary>
+		<summary lang="uk">Прогноз погоди з </summary>
+		<summary lang="zh">来源于 yahoo.com 的天气预报</summary>
+		<description lang="af">Weervoorspelling verskaf deur Yahoo! Weer (http://weather.yahoo.com/)</description>
+		<description lang="ar">خدمه تنبؤات الطقس تأتيكم برعايه ياهوو الطقس (http://weather.yahoo.com/)</description>
+		<description lang="bg">Синоптична прогноза, предоставена от Yahoo! Weather (http://www.yahoo.com/)</description>
+		<description lang="ca">Previsió del temps proporcionada per Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="cs">Předpověď počasí poskytnuta stránkou Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="da">Vejrudsigten leveret af Yahoo! vejr (http://weather.com/)</description>
+		<description lang="de">Wettervorhersage bereitgestellt durch Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="el">Η πρόγνωση καιρού παρέχεται από το Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="en">Weather forecast provided by Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="en_NZ">Weather forecast provided by Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="en_US">Weather forecast provided by Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="es">Predicción meteorológica facilitada por Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="et">Ilmaennustuse toob teieni Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="fi">Sääennusteen tarjoaa Yahoo! Weather (http://weather.yahoo.com)</description>
+		<description lang="fr">Prévisions météo fournies par Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="fr_CA">Prévisions météorologiques fournies par Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="gl">Predición meteorolóxica fornecida por Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="he">תחזית מזג אוויר מסופקת ע"י Yahoo! Weather (בכתובת http://weather.yahoo.com)</description>
+		<description lang="hr">Prognoza vremena koju pruža Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="hu">Az időjárás előrejelzést biztosítja a Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="is">Veðurspá frá Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="it">Servizio meteo fornito da Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="ja">Yahoo! Weather (http://weather.yahoo.com/) 提供の天気予報</description>
+		<description lang="ko">Yahoo! Weather (http://weather.yahoo.com/) 에서 제공하는 일기예보</description>
+		<description lang="lt">Yahoo! Weather pateikta orų prognozė (http://weather.yahoo.com/)</description>
+		<description lang="lv">Laikapstākļu prognoze pēc Yahoo! laika ar nosacījumu (http://weather.yahoo.com/)</description>
+		<description lang="nl">Weersverwachting geleverd door Yahoo! (http://weather/yahoo.com)</description>
+		<description lang="no">Værvarsel levert av Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="pl">Prognoza pogody jest dostarczona dzięki uprzejmości serwisu Yahoo! (http://weather.yahoo.com/)</description>
+		<description lang="pt">Previsão metereológica fornecida por Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="pt_BR">Previsão climática fornecida por Yahoo! Weather (http://weather.yahoo.com)</description>
+		<description lang="ro">Prognoză meteo oferită de Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="ru">Прогноз погоды предоставлен Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="sk">Predpoveď počasia poskytovaná službou Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="sl">Vremenska napoved od Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="sr_RS">Прогноза времена коју је омогућио Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="sv">Väderprognos tillhandahållen av Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="tr">Yahoo! Weather tarafından sağlana hava durumu tahmini (http://weather.yahoo.com/)</description>
+		<description lang="uk">Прогноз погоди надано Yahoo! Weather (http://weather.yahoo.com/)</description>
+		<description lang="zh">由雅虎天气提供的天气预报（http://weather.yahoo.com/）</description>
+		<disclaimer lang="af">Die gebruik van hierdie byvoeging beteken dat jy ooreengekom met die diensvoorwaardes wat op geleë is http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="ar">إستخدامك لهذه اﻹضافه يعنى موافقتك على شروط الخدمه التى يمكن اﻹطلاع عليها من خلال http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="bg">Употребявайки добавката Вие се съгласявате с условията за ползване на услугата, които се намират на http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="ca">L'ús d'aquest complement implica que vostè ha acceptat els termes de servei ubicats a http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="cs">Používáním tohoto rozšíření schvalujete podmínky užívání umístěné na http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="da">Brug af denne add-on betyder at du har accepteret betingelserne for brug som du finder på http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="de">Die Benutzung der Erweiterung impliziert, das sie den Nutzungsbedingungen unter http://developer.yahoo.com/weather/#terms zugestimmt haben</disclaimer>
+		<disclaimer lang="el">Χρήση αυτού του πρόσθετου συνεπάγεται την αποδοχή των Όρων Χρήσης της Υπηρεσίας (Terms of Service) οι οποίοι βρίσκονται στο http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="en">Use of this add-on implies that you have agreed to the Terms of Service located at http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="en_NZ">Use of this add-on implies that you have agreed to the Terms of Service located at http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="en_US">Use of this add-on implies that you have agreed to the Terms of Service located at http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="es">El uso de este add-on implica la aceptación de los Términos de Servicio recogidos en http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="et">Selle lisa kasutamine tähendab nõustumist Kasutustingimustega aadressilt http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="fi">Tämän lisäosan käyttäminen tarkoittaa että hyväksyt käyttäehdot, jotka ovat osoitteessa http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="fr">Par l'utilisation de ce module, vous attestez accepter les Conditions Générales d'Utilisation disponibles sur http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="fr_CA">L'utilisation de cet addiciel implique que vous avez accepté les conditions générales d'utilisation situées à http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="gl">Empregar este complemento implica que vostede acepta os termos do servizo localizados en http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="he">מהשימוש בהרחבה זו משתמע כי הסכמת לתנאי השירות המפורטים ב-http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="hr">Korištenje ovog dodatka podrazumijeva da se slažete sa Pravilima korištenja koji se nalaze na: http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="hu">Ennek a kiegészínőnek a használatával elfogadja a Felhasználói Feltételeket amik megtalálhatóak a http://developer.yahoo.com/weather/#terms oldalon</disclaimer>
+		<disclaimer lang="is">Notkun á þessarri viðbót gefur til kynna að þú hafir samþykkt skilmálana sem finna má á http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="it">L'uso di questo Add-on implica l'accettazione delle Condizioni di Servizio che trovi su http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="ja">このアドオンを使うことにより、http://developer.yahoo.com/weather/#terms にある利用規約に同意したとみなされます。</disclaimer>
+		<disclaimer lang="ko">이 애드온을 사용하는 것은 http://developer.yahoo.com/weather/#terms 에 있는 서비스 이용 약관에 동의함을 의미합니다.</disclaimer>
+		<disclaimer lang="lt">Naudodami šį priedą, jūs sutinkate su paslaugos sąlygomis, esančiomis http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="lv">Lietojot šo spraudni nozīmē, ka jūs esat piekrituši pakalpojumu sniegšanas noteikumiem, kas atrodas http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="nl">Het gebruik van deze add-on impliceert dat je akkoord gaat met de service-voorwaarden op http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="no">Bruken av dette tillegget betinger at du har godkjent brukervilkårene på http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="pl">Korzystanie z tego dodatku jest równoznaczne z akceptacją regulaminu dostępnego pod adresem: http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="pt">O uso deste add-on implica o seu acordo com os Termos de Serviço disponíveis em http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="pt_BR">O uso deste complemento implica em aceitar os Termos de Serviço localizado em http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="ru">Используя это дополнение, вы соглашаетесь с условиями предоставления услуг, &#10;доступными по адресу: http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="sk">Používaním tohto doplnku súhlasíte s podmienkami používania služby umiestnenými na http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="sl">Uporaba tega dodatka pomeni, da ste se strinjali s pogoji storitve, ki se nahajajo na http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="sr_RS">Употреба овог додатка подразумева да сте сагласни са Условима Коришћења који се налазе на http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="sv">Användning av detta tillägg innebär att du har accepterat användarvillkoren som hittas på http://developer.yahoo.com/weather/#terms</disclaimer>
+		<disclaimer lang="tr">Bu eklentinin kullanımı aynı zamanda http://developer.yahoo.com/weather/#terms adresindeki Kullanım Koşullarını da kabul ettiğiniz anlamına gelir.</disclaimer>
+		<disclaimer lang="uk">Скориставшись цією надбудовою, ви тим самим погоджуєтеся з умовами використання: </disclaimer>
+		<disclaimer lang="zh">使用此插件表示你已同意此服务条款：http://developer.yahoo.com/weather/#terms</disclaimer>
+		<language></language>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE Version 2</license>
+		<forum>http://forum.kodi.tv/showthread.php?tid=169410</forum>
+		<website></website>
+		<email></email>
+		<source>https://github.com/ronie/weather.yahoo</source>
+	</extension>
+</addon>
+</addons>

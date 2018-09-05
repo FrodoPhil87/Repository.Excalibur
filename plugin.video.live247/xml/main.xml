@@ -1,0 +1,73 @@
+<plugin>
+	<name>Uk Tv Now</name>
+	<link>plugin://script.module.uktvnow</link>
+	<thumbnail/>
+	<fanart/>
+	<summary/>
+</plugin>
+
+
+
+
+<dir>
+	<name>Live Net</name>
+	<link>plugin://script.module.digital.net</link>
+	<thumbnail/>
+	<fanart/>
+	<summary/>
+</dir>
+
+
+
+<plugin>
+	<title>Tv One</title>
+	<link>plugin://plugin.video.tvone1111</link>
+	<summary>Tv One</summary>
+</plugin>
+
+
+
+
+<plugin>
+	<title>Swift Streams</title>
+	<link>plugin://script.module.swiftstreamz</link>
+</plugin>
+
+<dir>
+	<title>24/7 Movies</title>
+	<arconaitv>movies</arconaitv>
+</dir>
+
+
+
+<dir>
+	<title>24/7 Shows</title>
+	<arconaitv>shows</arconaitv>
+</dir>
+
+<dir>
+	<title>24/7 Networks</title>
+	<arconaitv>networks</arconaitv>
+</dir>
+
+
+<plugin>
+	<title>24/7 Random</title>
+	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=random</link>
+	<thumbnail/>
+	<fanart/>
+	<content/>
+</plugin>
+
+
+<dir>
+	<title>Sports Streams</title>
+	<sport_stream>games</sport_stream>
+</dir>
+
+
+
+<dir>
+	<title>Sports Replays</title>
+	<Airtable>sports_replays</Airtable>
+</dir>

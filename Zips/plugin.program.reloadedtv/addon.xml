@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.program.reloadedtv" name="[COLOR red]Reloaded TV Guide[/COLOR]" version="1.0.1" provider-name="">
+
+	<requires>
+		<import addon="xbmc.python" version="2.19.0"/>
+		<import addon="script.module.simplejson" version="3.3.0"/>
+		<import addon="script.module.requests" version="2.9.1"/>
+		<import addon="script.module.pyxbmct" version="1.2.0"/>
+		<import addon="script.module.elementtree" version="1.2.7"/>
+		<import addon="script.module.addon.common" version="2.0.0"/>
+	</requires>
+		
+	<extension point="xbmc.python.script" library="addon.py">
+            <provides>executable</provides>
+    </extension>   
+    
+    <extension point="xbmc.service" library="service.py" start="login"/>
+	<extension point="xbmc.addon.metadata">
+	
+		<summary lang="en">[COLOR red]Reloaded TV Guide[/COLOR] with a fully working EPG</summary>
+		<summary lang="en_US">[COLOR red]Reloaded TV Guide[/COLOR] with a fully working EPG</summary>
+
+		<description lang="en"></description>
+		<description lang="en_US"></description>
+		<disclaimer>This guide is a forked version of TDB TV Guide which includes an amalgamation of code from Andys TV Guide, FTV Guide, 
+On Tapp, Ivue and the original TV Guide by Twinthe.</disclaimer>
+		<language></language>
+		<platform>all</platform>
+		<license></license>
+		<forum></forum>
+		<website></website>
+		<email></email>
+	</extension>
+</addon>

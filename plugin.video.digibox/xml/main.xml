@@ -1,0 +1,78 @@
+
+
+<dir>
+    <name>Movies</name>
+    <link>file://movies.xml</link>
+    <animated_thumbnail/>
+    <thumbnail>special://home/addons/plugin.video.digibox/resources/media/Movie_new.png</thumbnail>
+</dir>
+
+
+
+
+<dir>
+    <name>Tv Shows</name>
+    <link>file://tv_shows.xml</link>
+    <animated_thumbnail/>
+    <thumbnail>special://home/addons/plugin.video.digibox/resources/media/Tv_new.png</thumbnail>
+    <animated_fanart/>
+    <fanart/>
+</dir>
+
+
+
+<dir>
+    <title>Kids</title>
+    <link>file://kids.xml</link>
+    <thumbnail>special://home/addons/plugin.video.digibox/resources/media/kids.png</thumbnail>
+</dir>
+
+
+<dir>
+    <title>Documentaries</title>
+    <link>file://topdocs.xml</link>
+    <thumbnail>special://home/addons/plugin.video.digibox/resources/media/Docs_new.png</thumbnail>
+</dir>
+
+
+
+<dir>
+    <name>Trakt</name>
+    <link>file://trakt.xml</link>
+    <thumbnail>special://home/addons/plugin.video.digibox/resources/media/Trakt_new.png</thumbnail>
+</dir>
+
+<dir>
+    <title>Search</title>
+    <tmdb>search</tmdb>
+    <animated_thumbnail/>
+    <thumbnail>special://home/addons/plugin.video.digibox/resources/media/Search_new.png</thumbnail>
+    <animated_fanart/>
+    <fanart/>
+</dir>
+
+
+
+<plugin>
+    <name>Testings</name>
+    <link>plugin://plugin.video.digibox/?action=developer</link>
+    <thumbnail/>
+</plugin>
+
+
+<dir>
+  <plugin>
+    <name>Pair / Authorize</name>
+    <link>plugin://script.69DeathPair/?action=RunAddon</link>
+    <thumbnail></thumbnail>
+    <summary>Pair your device with sites such as Openload + Authorize Real Debrid on ResolveURL & URLResolver.</summary>
+  </plugin>
+</dir>
+
+
+
+<plugin>
+    <name>Settings</name>
+    <link>plugin://plugin.video.digibox/?action=openSettings</link>
+    <thumbnail>special://home/addons/plugin.video.digibox/resources/media/Settings_new.png</thumbnail>
+</plugin>
